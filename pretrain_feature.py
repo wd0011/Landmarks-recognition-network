@@ -27,8 +27,8 @@ def image_input_fn(data_list = data_list):
 tf.reset_default_graph()
 tf.logging.set_verbosity(tf.logging.FATAL)
 
-m = hub.Module('https://tfhub.dev/google/delf/1')
-# m = hub.Module('saved_model.pb')
+
+m = hub.Module('saved_model.pb')
 
 # The module operates on a single image at a time, so define a placeholder to
 # feed an arbitrary image in.
